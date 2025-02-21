@@ -16,323 +16,519 @@
 <body>
 
     <!-- Navabr  start-->
-
-    <nav class="flex items-center justify-center bg-[#143422]  lg:px-[80px] h-[104px] ">
-        <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-            <a href="#" class="block cursor-pointer py-1.5 text-base text-slate-800 font-semibold">
-                <img src="./assets/logo.svg" />
+    <nav class="bg-[#143422] lg:px-[80px] py-5 lg:py-0 lg:h-[104px] relative z-20">
+        <div class="container flex items-center justify-between mx-auto h-full px-4">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="./assets/logo.svg" alt="Logo" class="w-auto lg:h-8">
             </a>
 
-            <div class="hidden lg:block">
-                <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-x-8">
-                    <li class=" text-base text-[#FFFFFF]">
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
 
-
-                        <a href="#" class="">
-                            Home
-                        </a>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-x-8">
+                <ul class="flex items-center gap-x-8">
+                    <li class="text-base text-[#FFFFFF]">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Home</a>
                     </li>
-                    <li class=" text-base text-[#FFFFFF]">
-
-
-                        <a href="#" class="">
-                            About Us
-                        </a>
+                    <li class="text-base text-[#FFFFFF]">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">About Us</a>
                     </li>
-                    <li class=" text-base text-[#FFFFFF]">
+                    <li class="relative text-base text-[#FFFFFF] flex items-center gap-x-2 group">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Services</a>
+                        <!-- Bottom arrow visible by default, hidden on hover -->
+                        <img src="./assets/bottomArrow.svg" alt="Dropdown" class="mt-0.5 block group-hover:hidden">
+                        <!-- Top arrow hidden by default, shown on hover -->
+                        <img src="./assets/topArrow.svg" alt="Dropdown" class="mt-0.5 hidden group-hover:block">
 
+                        <!-- Popup dropdown -->
+                        <div
+                            class="absolute left-0 top-full mt-2 w-[270px] bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                            <ul class="py-2 flex flex-col">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Hotel
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">
+                                        Theme Park</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Departement
+                                        Store</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Dining</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Padel
+                                        Tournaments and Games</a>
+                                </li>
 
-                        <a href="#" class="">
-                            Services
-                        </a>
+                            </ul>
+                        </div>
                     </li>
-                    <li class=" text-base text-[#FFFFFF]">
+                    <li class="relative text-base text-[#FFFFFF] flex items-center gap-x-2 group">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Media Center</a>
+                        <!-- Bottom arrow visible by default, hidden on hover -->
+                        <img src="./assets/bottomArrow.svg" alt="Dropdown" class="mt-0.5 block group-hover:hidden">
+                        <!-- Top arrow hidden by default, shown on hover -->
+                        <img src="./assets/topArrow.svg" alt="Dropdown" class="mt-0.5 hidden group-hover:block">
+
+                        <!-- Popup dropdown -->
+                        <div
+                            class="absolute left-0 top-full mt-2 w-[270px] bg-white text-black opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                            <ul class="py-2 flex flex-col">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Event
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">
+                                        Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 font-[500] text-black hover:bg-[#DEC37D] hover:text-[#143422]">Press</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
 
 
-                        <a href="#" class="">
-                            Media Center
-                        </a>
+
+                    <li class="text-base text-[#FFFFFF]">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Offers</a>
+                    </li>
+                    <li class="text-base text-[#FFFFFF]">
+                        <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Contact Us</a>
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center lg:gap-x-12 ">
-                <img src="./assets/search.svg" />
-
+            <div class="hidden lg:flex items-center gap-x-12">
+                <img src="./assets/search.svg" alt="Search">
                 <button
-                    class="text-[#DEC37D] font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[161px] h-[48px]"
+                    class="text-[#DEC37D] hover:bg-[#DEC37D] hover:text-[#143422] font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[161px] h-[48px]"
                     type="button">
                     Ask a Question
                 </button>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#143422] z-30">
+            <ul class="flex flex-col justify-center items-center space-y-5 py-7">
+                <li class="text-base text-white">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Home</a>
+                </li>
+                <li class="text-base text-white">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">About Us</a>
+                </li>
+                <li class="text-base text-white flex items-center gap-x-2">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Services</a>
+                    <img src="./assets/bottomArrow.svg" alt="Dropdown" class="mt-0.5">
+                </li>
+                <li class="text-base text-white flex items-center gap-x-2">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Media Center</a>
+                    <img src="./assets/bottomArrow.svg" alt="Dropdown" class="mt-0.5">
+                </li>
+                <li class="text-base text-white">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Offers</a>
+                </li>
+                <li class="text-base text-white">
+                    <a href="#" class="hover:text-[#DEC37D] hover:font-semibold">Contact Us</a>
+                </li>
+                <li class="flex hidden items-center gap-x-4 pt-4 border-t border-gray-700">
+                    <img src="./assets/search.svg" alt="Search" class="w-6 h-6">
+                    <button
+                        class="text-[#DEC37D] hover:bg-[#DEC37D] hover:text-[#143422] font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[161px] h-[48px]"
+                        type="button">
+                        Ask a Question
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+
 
     <!-- Navabr  end-->
 
-    <!-- hero section -->
-    <div class="px-20 pb-[92px]">
-        <div class=" py-12">
-
-            <img src="./assets/Frame.png" class="w-full h-[612px]">
-
-        </div>
-        <h1 class="text-[#143422] font-bold text-[42px] leading-[50px]">
-            Experience Unmatched Luxury at Doha Oasis
-        </h1>
-        <p class="text-[#1B1B1B] font-[400] mt-4 text-base leading-[24px]">
-            Doha Oasis is a multi use development project and a fashion shopping mall established on a 440,000 square
-            <br />meter built up area in the heart of Doha, the capital city of Qatar.
-        </p>
-    </div>
-
-    <!-- hero section end -->
-
-    <div style="background-image: url(./assets/flex.png);"
-        class="bg-[url('')] bg-cover bg-center mb-[92px] flex items-center">
-        <div class="w-1/2 pl-[80px]">
-            <h1 class="text-[#143422] text-[#FFFFFF] font-bold text-[42px] leading-[50px]">
-                An oasis for ultimate <br /> experiences
-
-            </h1>
-            <p class="text-[#FFFFFFCC] font-[400] mt-4 text-base leading-[24px]">
-                Where creating memories has no bounds, Your gateway to a destination <br /> of exceptional experiences,
-                luxurious hospitality, ultimate shopping, and <br /> unforgettable adventures.
-            </p>
-            <button
-                class="text-[#DEC37D] lg:mt-8 font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[136px] h-[48px]"
-                type="button">
-                Learn More
-            </button>
-
-        </div>
-        <div class="w-1/2">
-
-            <img src="./assets/image.png" class="w-full h-[612px]">
-
-        </div>
-
-    </div>
-
-    <!-- section three -->
-
-    <div class="px-20">
-        <div class="flex items-center  justify-between">
-            <h1 class="text-[#143422] font-bold text-[42px] leading-[50px]">
-                Check Out our Properties
-            </h1>
-            <button
-                class="text-[#143422] lg:mt-8 font-[Outfit] text-base font-semibold border border-[#143422] w-[136px] h-[48px]"
-                type="button">
-                View All
-            </button>
-        </div>
-
-        <div class="mt-8">
-            <div class="flex items-center gap-x-6">
-                <img src="./assets/1 Property.png" class="h-[491px]" />
-                <img src="./assets/2 Property.png" class="h-[491px]" />
-
+    <div class="flex flex-col space-y-12 lg:space-y-[92px]">
+        <!-- hero section -->
+        <div class="px-4 lg:px-20 ">
+            <div class="py-8 lg:py-12">
+                <img src="./assets/Frame.png" class="w-full h-[312px] lg:h-[612px] object-cover">
             </div>
-            <div class="flex flex-wrap items-center gap-6 mt-8">
-                <img src="./assets/3 Property.png" class="h-[415px]  w-[410]" />
-                <img src="./assets/4 Property.png" class="h-[415px] w-[410]" />
-                <img src="./assets/5 Property.png" class="h-[415px] w-[410]" />
 
-
-            </div>
-        </div>
-    </div>
-
-    <!-- section 4 -->
-
-    <div style="background-image: url(./assets/welcome.png);"
-        class="h-[682px] bg-cover mt-[92px] bg-center mb-[92px] flex items-center">
-        <div class="w-1/2 pl-[80px] bg-[#122D22B2] h-full flex flex-col justify-center">
-            <h1 class="text-[#FFFFFF] font-bold text-[32px] leading-[38px]">
-                Welcoming NOVO to Our Family
+            <h1 class="text-[#143422] font-bold text-[24px] lg:text-[42px] leading-[28px] lg:leading-[50px]">
+                Experience Unmatched Luxury at Doha Oasis
             </h1>
-            <p class="text-[#FFFFFFCC] font-[400] mt-4 text-base leading-[24px]">
-                Step into a world where every scene comes to life with <br /> breathtaking visuals, immersive sound, and
-                unparalleled comfort.<br /> Novo Cinema goes beyond the ordinary, redefining the way you <br />
-                experience movies with cutting-edge technology, luxurious seating,<br /> and an atmosphere that elevates
-                your entire cinematic journey.
+            <p class="text-[#1B1B1B] font-[400] mt-4 text-base leading-[24px]  capitalize">
+                Doha Oasis is a multi use development project and a fashion shopping mall established on a 440,000
+                square
+                <br />meter built up area in the heart of Doha, the capital city of Qatar.
             </p>
-            <button
-                class="text-[#DEC37D] lg:mt-8 font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[161px] h-[48px]"
-                type="button">
-                Book Your Seat
-            </button>
-        </div>
-
-        <div class="w-1/2">
 
 
         </div>
 
-    </div>
+        <!-- hero section end -->
 
-    <!-- section 5 -->
-    <div class=" px-20 bg-center mb-[92px] flex items-center gap-x-[76px]">
+        <div style="background-image: url(./assets/flex.png);"
+            class="bg-cover bg-center  flex flex-col lg:flex-row items-center">
+            <div class="w-full lg:w-1/2  px-4 lg:px-0 lg:pl-[80px]">
+                <h1
+                    class="text-[#143422] text-[#FFFFFF] mt-[42px] lg:mt-0 capitalize font-bold text-[24px] lg:text-[42px] leading-[28px] lg:leading-[50px]">
+                    An oasis for ultimate <br /> experiences
 
-        <div class="w-1/2">
-
-            <img src="./assets/global.png" class="w-full h-[440px]">
-
-        </div>
-        <div class="w-1/2 pl-[80px]">
-            <h1 class="text-[#143422] font-bold text-[42px] leading-[50px]">
-                wHERE A wORLD OF<br />
-                gLOBAL cUISINES aWAITS<br />
-                YOUR dISCOVERY
-
-            </h1>
-            <p class="text-[#1B1B1B] font-[400] mt-4 text-base leading-[24px]">
-                Doha Oasis is your gateway to a destination of exceptional experiences, luxurious hospitality, fine
-                dining, Ultimate shopping and Unforgettable adventures.
-            </p>
-            <button
-                class="text-[#143422] lg:mt-5 font-[Outfit] text-base font-semibold border border-[#143422] w-[161px] h-[48px]"
-                type="button">
-                Dine in Luxury
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- section 6 -->
-    <div class=" px-20 bg-center mb-[92px] flex items-center gap-x-[76px]">
-
-
-        <div class="w-1/2 pl-[80px]">
-            <h1 class="text-[#143422] font-bold text-[42px] leading-[50px]">
-                Your Opinion Matters To Us! Let Us Know What You Enjoyed
-
-            </h1>
-            <p class="text-[#1B1B1B] font-[400] mt-4 text-base leading-[24px]">
-                our thoughts and experiences matter to us! We’re committed to providing <br /> the best possible
-                service, and your feedback helps us improve.
-            </p>
-            <button
-                class="text-[#143422] lg:mt-5 font-[Outfit] text-base font-semibold border border-[#143422] w-[150px] h-[48px]"
-                type="button">
-                Let’s Connect
-            </button>
-
-        </div>
-        <div class="w-1/2">
-
-            <img src="./assets/global.png" class="w-full h-[440px]">
-
-        </div>
-
-    </div>
-
-    <!-- section 7 -->
-
-    <div style="background-image: url(./assets/flex.png);"
-        class="bg-[url('')] bg-cover bg-center p-12 mb-[92px] flex items-center lg:gap-x-[84px]">
-
-        <div class="w-1/2">
-
-            <img src="./assets/section7.png" class="w-full h-[390px]">
-
-        </div>
-        <div class="w-1/2 ">
-            <h1 class="text-[#143422] text-[#FFFFFF] font-bold text-[42px] leading-[50px]">
-                Stay Updated with <br /> Our news and Offers
-
-            </h1>
-            <p class="text-[#FFFFFFCC] font-[400] mt-4 text-base leading-[24px]">
-                Subscribe and be the first to receive our exclusive offers.
-            </p>
-            <form class="flex flex-col mt-6 ">
-                <input type="email" placeholder="Your email"
-                    class="border text-[#FFFFFF] placeholder-white pl-6 !outline-none border-[#FFFFFF] h-12 w-[312px]" />
-                <button
-                    class="text-[#DEC37D] lg:mt-4 font-[Outfit] text-base font-semibold border border-[#DEC37D] w-[159px] h-[48px]"
-                    type="button">
-                    Register Today
-                </button>
-            </form>
-
-        </div>
-
-    </div>
-
-    <!-- footer -->
-    <footer class="bg-[#143422]  px-20 pt-16">
-        <div class="flex items-center">
-            <div class="w-1/2">
-                <img src="./assets/logo.svg">
-                <p class="text-[#FFFFFFCC] font-[400] mt-5 text-base leading-[24px]">
-                    Strategic locations, premium infrastructure, and <br /> government-backed support for businesses of
-                    all
-                    sizes.
+                </h1>
+                <p class="text-[#FFFFFFCC] font-[400] capitalize mt-4 text-base leading-[24px]">
+                    Where creating memories has no bounds, Your gateway to a destination <br /> of exceptional
+                    experiences,
+                    luxurious hospitality, ultimate shopping, and <br /> unforgettable adventures.
                 </p>
-                <div class=" flex items-center mt-8">
-                    <img src="./assets/Container.svg" />
-                    <img src="./assets/Item → SVG.svg" />
+                <button
+                    class="text-[#DEC37D] hover:bg-[#DEC37D] hover:text-[#143422] cursor-pointer mt-4 lg:mt-8 font-[Outfit] text-base font-semibold border border-[#DEC37D] w-full lg:w-[136px] h-[48px]"
+                    type="button">
+                    Learn More
+                </button>
 
-                    <img src="./assets/SVG.svg" />
+            </div>
+            <div class="w-full mt-6  lg:mt-0 lg:w-1/2">
 
-                    <img src="./assets/Container (1).svg" />
+                <img src="./assets/men.png" class="w-full lg:h-[612px]">
+
+            </div>
+
+        </div>
+
+        <!-- section three -->
+
+        <div class="">
+            <div
+                class="px-4 lg:px-20 flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-center  justify-between">
+                <h1
+                    class="text-[#143422] capitalize font-bold text-[24px] lg:text-[42px] leading-[28px] lg:leading-[50px]">
+                    Check Out our Properties
+                </h1>
+                <button
+                    class="text-[#143422] hover:text-[#DEC37D] hover:bg-[#143422] cursor-pointer  lg:mt-8 font-[Outfit] text-base font-semibold border border-[#143422] w-full lg:w-[136px] h-[48px]"
+                    type="button">
+                    View All
+                </button>
+            </div>
+
+            <div class="mt-8 px-4 lg:px-20">
+                <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row items-center lg:gap-x-6">
+                    <div class="lg:w-[40%] h-[491px] relative group">
+                        <img src="./assets/newImages.png" class="w-full h-full object-cover" alt="Card 1" />
+                        <div class="absolute inset-0 flex p-8 flex-col justify-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:bg-[linear-gradient(to_bottom,rgba(20,52,34,0),#143422)]">
+                          <h1 class="text-[32px] font-bold text-white leading-[38px]">
+                            Printemps Doha
+                          </h1>
+                          <p class="text-base capitalize font-[400] mt-1 text-white leading-[24px]">
+                            Where Luxury Shopping has endless Possibilities.
+                          </p>
+                          <button class="w-full capitalize cursor-pointer h-12 border text-[#DEC37D] font-semibold border-[#DEC37D] mt-3">
+                            Discover Our Brands
+                          </button>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                    <div class="lg:w-[60%] h-[491px] relative group">
+                      <img src="./assets/card2.svg" class="w-full h-full object-cover" alt="Card 2" />
+                      <div class="absolute inset-0 flex p-8 flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:bg-[linear-gradient(to_bottom,rgba(20,52,34,0),#143422)]">
+                        <h1 class="text-[32px] font-bold text-white leading-[38px]">
+                            Doha Quest
+                        </h1>
+                        <p class="text-base font-[400] capitalize mt-1 text-white leading-[24px]">
+                            Where adventure has no limits.
+                                                </p>
+                        <button class="w-full cursor-pointer capitalize h-12 border text-[#DEC37D] font-semibold border-[#DEC37D] mt-3">
+                            Join the Thrill
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+
+                <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row items-center lg:gap-x-6 mt-4 lg:mt-8">
+                    <div class="lg:w-[33.333%] relative group">
+                        <img src="./assets/card3.svg" class="w-full  object-cover h-auto" alt="Card 3" />
+                        <div class="absolute inset-0 flex p-8 flex-col justify-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:bg-[linear-gradient(to_bottom,rgba(20,52,34,0),#143422)]">
+                            <h1 class="text-[32px] font-bold text-white leading-[38px]">
+                                Doha Oasis padel
+                            </h1>
+                            <p class="text-base font-[400] mt-1 text-white leading-[24px]">
+                                Where Every Serve Shines.
+                                                        </p>
+                            <button class="w-full cursor-pointer h-12 border text-[#DEC37D] font-semibold border-[#DEC37D] mt-3">
+                                Join Our Community
+                            </button>
+                          </div>
+                    </div>
+                    <div class="lg:w-[33.333%]  relative group">
+                        <img src="./assets/card4.svg" class="w-full  object-cover h-auto" alt="Card 4" />
+                        <div class="absolute inset-0 flex p-8 flex-col justify-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:bg-[linear-gradient(to_bottom,rgba(20,52,34,0),#143422)]">
+                            <h1 class="text-[32px] font-bold text-white leading-[38px]">
+                                Banyan Tree Doha
+                            </h1>
+                            <p class="text-base font-[400] capitalize mt-1 text-white leading-[24px]">
+                                Where Luxury and serenity meet.
+                                                        </p>
+                            <button class="w-full cursor-pointer h-12 border text-[#DEC37D] font-semibold border-[#DEC37D] mt-3">
+                                Plan Your Retreat
+                            </button>
+                          </div>
+                    </div>
+                    <div class="lg:w-[33.333%] relative group">
+                        <img src="./assets/card5.svg" class="w-full  object-cover h-auto" alt="Card 5" />
+                        <div class="absolute inset-0 flex p-8 flex-col justify-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:bg-[linear-gradient(to_bottom,rgba(20,52,34,0),#143422)]">
+                            <h1 class="text-[32px] font-bold text-white leading-[38px]">
+                                Novo Cinemas
+                                                        </h1>
+                            <p class="text-base capitalize font-[400] mt-1 text-white leading-[24px]">
+                                Where Cinematics Experiences come to Life.
+                                                        </p>
+                            <button class="w-full capitalize cursor-pointer h-12 border text-[#DEC37D] font-semibold border-[#DEC37D] mt-3">
+                                Explore the Movies
+                            </button>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- section 4 -->
+
+        <div style="background-image: url(./assets/welcome.png);"
+            class=" lg:h-[682px] bg-cover bg-center  flex items-center">
+            <div
+                class="w-full px-4 py-[76px] lg:py-0 lg:px-0 lg:w-1/2 lg:pl-[80px] bg-[#122D22B2] h-full flex flex-col justify-center">
+                <h1
+                    class="text-[#FFFFFF] capitalize font-bold text-[20px] lg:text-[32px] leading-[30px] lg:leading-[38px]">
+                    Welcoming NOVO to Our Family
+                </h1>
+                <p class="text-[#FFFFFFCC] capitalize font-[400] mt-4 text-sm lg:text-base leading-[24px]">
+                    Step into a world where every scene comes to life with <br class=" hidden lg:block" /> breathtaking
+                    visuals, immersive sound, and
+                    unparalleled comfort.<br class=" hidden lg:block" /> Novo Cinema goes beyond the ordinary,
+                    redefining
+                    the way you <br class=" hidden lg:block" />
+                    experience movies with cutting-edge technology, luxurious seating,<br class=" hidden lg:block" />
+                    and an
+                    atmosphere that elevates
+                    your entire cinematic journey.
+                </p>
+                <button
+                    class="text-[#DEC37D] hover:bg-[#DEC37D] hover:text-[#143422] cursor-pointer mt-6 lg:mt-8 font-[Outfit] text-base font-semibold border border-[#DEC37D] w-full lg:w-[161px] h-[48px]"
+                    type="button">
+                    Book Your Seat
+                </button>
+            </div>
+
+            <div class="lg:w-1/2">
+
+
+            </div>
+
+        </div>
+
+        <!-- section 5 -->
+        <div class="px-4  lg:mt-0 lg:px-20 bg-center  flex flex-col space-y-4 lg:flex-row items-center lg:gap-x-[76px]">
+
+            <div class="w-full lg:w-1/2">
+
+                <img src="./assets/global.png" class="w-full  lg:h-[440px]">
+
+            </div>
+            <div class="w-full lg:w-1/2 ">
+                <h1 class="text-[#143422] font-bold text-[24px] leading-[28px] lg:text-[42px]  lg:leading-[50px]">
+                    Where a World of <br /> Global Cuisines Awaits <br /> your Discovery
+
+                </h1>
+                <p class="text-[#1B1B1B] font-[400] mt-4 text-base leading-[24px]">
+                    Doha Oasis is your gateway to a destination of exceptional experiences, luxurious hospitality, fine
+                    dining, Ultimate shopping and Unforgettable adventures.
+                </p>
+                <button
+                    class="text-[#143422] mt-4 lg:mt-0 hover:bg-[#143422] hover:text-white cursor-pointer lg:mt-5 font-[Outfit] text-base font-semibold border border-[#143422] w-full lg:w-[161px] h-[48px]"
+                    type="button">
+                    Dine in Luxury
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- section 6 -->
+        <div class="px-4 lg:px-20 bg-center  flex flex-col space-y-6 lg:flex-row items-center gap-x-[76px]">
+
+
+            <div class="w-full lg:w-1/2 ">
+                <h1
+                    class="text-[#143422] font-bold capitalize text-[24px] lg:text-[42px] leading-[28px] lg:leading-[50px]">
+                    Your Opinion Matters To Us! Let Us Know What You Enjoyed
+
+                </h1>
+                <p class="text-[#1B1B1B] capitalize font-[400] mt-4 text-base leading-[24px]">
+                    our thoughts and experiences matter to us! We’re committed to providing <br /> the best possible
+                    service, and your feedback helps us improve.
+                </p>
+                <button
+                    class="text-[#143422] mt-6 lg:mt-0 hover:bg-[#143422] hover:text-white cursor-pointer  lg:mt-5 font-[Outfit] text-base font-semibold border border-[#143422] w-full lg:w-[150px] h-[48px]"
+                    type="button">
+                    Let’s Connect
+                </button>
+
+            </div>
+            <div class="lg:w-1/2">
+
+                <img src="./assets/opinion.png" class="w-full lg:h-[440px]">
+
+            </div>
+
+        </div>
+
+        <!-- section 7 -->
+
+        <div style="background-image: url(./assets/flex.png);"
+            class=" bg-cover bg-center px-4 lg:px-0 space-y-6 lg:space-y-0 py-8 lg:py-0 lg:p-12  flex flex-col lg:flex-row items-center lg:gap-x-[84px]">
+
+            <div class="w-full lg:w-1/2">
+
+                <img src="./assets/section7.png" class="w-full lg:h-[390px]">
+
+            </div>
+            <div class=" lg:w-1/2 ">
+                <h1
+                    class="text-[#143422] capitalize text-[#FFFFFF] font-bold text-[24px] lg:text-[42px] leading-[28px] lg:leading-[50px]">
+                    Stay Updated with <br /> Our news and Offers
+
+                </h1>
+                <p class="text-[#FFFFFFCC] capitalize font-[400] mt-3 lg:mt-4 text-base leading-[24px]">
+                    Subscribe and be the first to receive our exclusive offers.
+                </p>
+                <form class="flex flex-col space-y-4 lg:space-y-0 mt-6 ">
+                    <input type="email" placeholder="Your email"
+                        class="border text-[#FFFFFF] placeholder-white pl-6 !outline-none border-[#FFFFFF] h-12 w-full lg:w-[312px]" />
+                    <button
+                        class="text-[#DEC37D] hover:bg-[#DEC37D] hover:text-[#143422] cursor-pointer  lg:mt-4 font-[Outfit] text-base font-semibold border border-[#DEC37D] lg:w-[159px] h-[48px]"
+                        type="button">
+                        Register Today
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+        <footer class="bg-[#143422] px-4  py-12 lg:py-0 lg:px-20 lg:pt-16">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2">
+                    <img src="./assets/logo.svg">
+                    <p class="text-[#FFFFFFCC] font-[400] mt-5 text-base leading-[24px]">
+                        Strategic locations, premium infrastructure, and <br /> government-backed support for businesses
+                        of
+                        all
+                        sizes.
+                    </p>
+                    <div class=" flex flex-wrap items-center mt-8 gap-x-4 ">
+                        <img src="./assets/world.svg" class="" />
+                        <img src="./assets/Item → SVG.svg" />
+
+                        <img src="./assets/SVG.svg" />
+
+                        <img src="./assets/Container (1).svg" />
+
+
+                    </div>
+                </div>
+                <div class="w-full mt-12 lg:mt-0 lg:w-1/2 flex justify-start lg:justify-end ">
+                    <ul class="flex flex-col gap-y-3  lg:text-left">
+                        <li>
+                            <a href="" class="text-base text-white">About Us</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-base text-white">Careers</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-base text-white">Media Center</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-base text-white">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-base text-white">Press</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-base text-white">Privacy & Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:flex hidden  items-center mt-12 h-[88px] justify-between">
+                <p class="text-[#FFFFFFB2]">
+                    Copyright © 2024 Doha Oasis. All rights reserved.
+                </p>
+                <div class="flex items-center gap-x-6 ">
+                    <img src="./assets/Social icon.svg">
+                    <img src="./assets/Social icon (1).svg">
+                    <img src="./assets/Social icon (2).svg">
+                    <img src="./assets/cell.svg">
+
+                    <img src="./assets/Social icon (3).svg">
+
+
+                    <img src="./assets/cell (1).svg">
+
 
 
                 </div>
             </div>
-            <div class="w-1/2 flex justify-end ">
-                <ul class="flex flex-col gap-y-3  text-left">
-                    <li>
-                        <a href="" class="text-base text-white">About Us</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-base text-white">Careers</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-base text-white">Media Center</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-base text-white">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-base text-white">Press</a>
-                    </li>
-                    <li>
-                        <a href="" class="text-base text-white">Privacy & Policy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex items-center mt-12 h-[88px] justify-between">
-            <p class="text-[#FFFFFFB2]">
-                Copyright © 2024 Doha Oasis. All rights reserved.
-            </p>
-            <div class="flex items-center gap-x-6 ">
-                <img src="./assets/Social icon.svg">
-                <img src="./assets/Social icon (1).svg">
-                <img src="./assets/Social icon (2).svg">
-                <img src="./assets/cell.svg">
-
-                <img src="./assets/Social icon (3).svg">
-
-
-                <img src="./assets/cell (1).svg">
-
-
-
-            </div>
-        </div>
 
 
 
 
 
 
-    </footer>
+        </footer>
+
+    </div>
+    <!-- footer -->
+
 
 
 
 </body>
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
 
 </html>
